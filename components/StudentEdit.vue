@@ -6,26 +6,22 @@
         <div class="editpain">
          <el-form :label-position="labelPosition" label-width="100px" v-model="form">
 
-            <el-form-item class="name" label="姓名">
-              <el-input v-model="form.Name" ></el-input>
+            <el-form-item class="birth" label="生日">
+              <el-date-picker
+      v-model="form.birthday"
+      type="month"
+      placeholder="选择日期"
+      :picker-options="pickerOptions0">
+    </el-date-picker>
             </el-form-item>
 
-            <el-form-item class="sid" label="学号">
-              <el-input type="password" v-model="form.Sid" ></el-input>
+            <el-form-item class="address" label="地址">
+              <el-input v-model="form.address" ></el-input>
             </el-form-item>
 
-            <el-form-item class="sex" label="性别">
-              <el-input type="password" v-model="form.Sex" ></el-input>
+            <el-form-item class="introduce" label="自我介绍">
+              <el-input  v-model="form.introduce" ></el-input>
             </el-form-item>
-
-            <el-form-item class="email" label="联系方式">
-              <el-input type="password" v-model="form.Email" ></el-input>
-            </el-form-item>
-
-            <el-form-item class="class" label="班级">
-              <el-input type="password" v-model="form.Class" ></el-input>
-            </el-form-item>
-
           </el-form>
           <el-button class="pushbutton" @click="push()">提交</el-button>
         </div>
@@ -40,11 +36,14 @@ export default {
     return {
       labelPosition: 'right',
       form: {
-        Name: '',
-        Sid: '',
-        Sex: '',
-        Email: '',
-        Class: ''
+        birthday: '',
+        address: '',
+        introduce: ''
+      },
+      pickerOptions0: {
+        disabledDate (time) {
+          return time.getTime() > Date.now() - 8.64e7
+        }
       }
     }
   },
