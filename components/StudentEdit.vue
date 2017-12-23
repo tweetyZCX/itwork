@@ -22,6 +22,12 @@
             <el-form-item class="introduce" label="自我介绍">
               <el-input  v-model="form.introduce" ></el-input>
             </el-form-item>
+            <el-form-item class="phone" label="手机">
+              <el-input  v-model="form.phone" ></el-input>
+            </el-form-item>
+            <el-form-item class="telephone" label="家庭电话">
+              <el-input  v-model="form.telephone" ></el-input>
+            </el-form-item>
           </el-form>
           <el-button class="pushbutton" @click="push()">提交</el-button>
         </div>
@@ -38,7 +44,9 @@ export default {
       form: {
         birthday: '',
         address: '',
-        introduce: ''
+        introduce: '',
+        phone: '',
+        telephone: ''
       },
       pickerOptions0: {
         disabledDate (time) {
