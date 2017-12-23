@@ -116,7 +116,7 @@ export default {
   
 }
 .getout {
-  background-color: #40aee9;
+  background-color: #65a8a0;
   margin-left:1655px;
   height: 40px;
 }
