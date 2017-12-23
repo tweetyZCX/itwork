@@ -5,7 +5,7 @@
             
             <div class="say" style="position:relative;left:50px;top:200px;">您的更改已提交，请等待审核.......</div>
             <br>
-            <el-button class="ok" style="position:relative;left:40px" @click="Ok()">确定</el-button>
+            <el-button class="ok" style="position:relative;left:40px;top:-600px;" @click="Ok()">确定</el-button>
            
            </el-main>
 
@@ -35,7 +35,7 @@ export default {
   background-color: #fefefe;
   color: #333;
   text-align: center;
-  line-height: 160px;
+  line-height: 500px;
 }
 
 .say {
